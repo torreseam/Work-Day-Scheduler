@@ -20,6 +20,19 @@
         <p id="currentDay" class="lead"></p>
     </header>
     <form id="taskForm">
+        <!-- 8AMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">8AM</div>
+                <div class="description" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task8Am"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
+            </div>
+        </div>
+
         <!-- 9AMTimeblocks go here -->
         <div class="container">
             <div class="row">
@@ -92,6 +105,42 @@
                 </button>
             </div>
         </div>
+        <!-- 3PMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">3PM</div>
+                <div class="description" id="div3Pm" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task3Pm"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 4PMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">4PM</div>
+                <div class="description" id="div4Pm" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task4Pm"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 5PMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">5PM</div>
+                <div class="description" id="div5Pm" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task5Pm"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
+            </div>
+        </div>
 
     </form>
 
@@ -123,6 +172,89 @@
     }
     if (10 <= currentTime && currentTime < 10.999722) {
         document.getElementById("div10Am").style.backgroundColor = "#ff6961";
+    }
+    // 11 AM Color Time-Block
+
+    if (12 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div11Am").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 10.999722) {
+        document.getElementById("div11Am").style.backgroundColor = "#77dd77";
+    }
+    if (11 <= currentTime && currentTime < 11.999722) {
+        document.getElementById("div11Am").style.backgroundColor = "#ff6961";
+    }
+
+    // 12 PM Color Time-Block
+
+    if (13 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 11.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (12 <= currentTime && currentTime < 12.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
+    }
+
+  // 1 PM Color Time-Block
+
+    if (14 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 12.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (13 <= currentTime && currentTime < 13.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
+    }
+
+    // 2 PM Color Time-Block
+
+    if (15 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 13.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (14 <= currentTime && currentTime < 14.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
+    }
+
+    // 3 PM Color Time-Block
+
+    if (16 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 14.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (15 <= currentTime && currentTime < 15.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
+    }
+
+    // 4 PM Color Time-Block
+
+    if (17 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 15.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (16 <= currentTime && currentTime < 16.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
+    }
+
+    // 5 PM Color Time-Block
+
+    if (18 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 16.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#77dd77";
+    }
+    if (17 <= currentTime && currentTime < 17.999722) {
+        document.getElementById("div12Pm").style.backgroundColor = "#ff6961";
     }
 
 </script>
