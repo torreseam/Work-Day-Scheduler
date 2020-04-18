@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
 </head>
 
@@ -19,29 +19,63 @@
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-        <!-- Timeblocks go here -->
-        <!-- Row 1 -->
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>Header</h1>
+    <form id="taskForm">
+        <!-- 9AMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">9AM</div>
+                <div class="description" id="div9Am" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task9Am"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
             </div>
         </div>
-        <!-- Row 2 -->
-        <div class="row">
-            <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt optio provident tempora amet,
-                    eveniet et,
-                    eum illum, culpa laborum dicta recusandae magni architecto. Illo saepe facilis, unde. Debitis,
-                    atque,
-                    doloremque?</p>
+        <!-- 10AMTimeblocks go here -->
+        <div class="container">
+            <div class="row">
+                <div class="hour" class="col-sm-2 col-sm-2 col-md-2 col-lg-2">10AM</div>
+                <div class="description" id="div10Am" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <textarea id="task10Am"></textarea>
+                </div>
+                <button class="saveBtn" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <i class="fas fa-lock fa-lg"></i>
+                </button>
             </div>
-
         </div>
+    </form>
 
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
+
+<script type="text/javascript">
+
+    var currentTime = new Date().getHours();
+
+    // 9 AM Color Time-Block
+
+    if (10 <= currentTime && currentTime < 8.999722) { document.getElementById("div9Am").style.backgroundColor = "#d3d3d3"; }
+    if (9 <= currentTime && currentTime < 9.999722) {
+        document.getElementById("div9Am").style.backgroundColor = "#ff6961";
+    }
+
+    // 10 AM Color Time-Block
+
+    if (11 <= currentTime && currentTime < 8.999722) {
+        document.getElementById("div10Am").style.backgroundColor = "#d3d3d3";
+    }
+    if (9 <= currentTime && currentTime < 9.999722) {
+        document.getElementById("div10Am").style.backgroundColor = "#77dd77";
+    }
+    if (10 <= currentTime && currentTime < 10.999722) {
+        document.getElementById("div10Am").style.backgroundColor = "#ff6961";
+    }
+
+</script>
 
 </html>
