@@ -9,8 +9,9 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  height: 45px;
-  /* width: 100%; */
+  width: 100%;
+  /* height: 100%; 
+  box-sizing: border-box; */
   line-height: 1.5;
   font-size: 14px;
   font-weight: bold;
@@ -23,11 +24,16 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-color: lightgray;
 }
 
 .description{
   white-space: pre-wrap;
-  width: fit-content;
+  background-color: #d3d3d3;
+  width: 84%;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .time-block{
@@ -37,7 +43,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  /* height: 80px; */
   border-top: 1px solid white;;
 }
 
@@ -60,10 +66,10 @@ textarea{
   color: white;
 }
 
-.future {
+/* .future {
   background-color: #77dd77;
   color: white;
-}
+} */
 
 .saveBtn {
   border-left: 1px solid black;
@@ -71,10 +77,15 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  width: 8%;
   text-align: center;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#taskForm {
+  background-color: white;
 }
