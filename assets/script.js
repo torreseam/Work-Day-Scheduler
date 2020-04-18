@@ -7,7 +7,7 @@ console.log(currentDate);
 console.log(currentDay);
 
 $('#currentDay').append(currentDay + ", " + currentDate);
-$('#currentDay').css("color", "#06AED5");
+$('#currentDay').css("color", "#000000");
 
 // Storage of Tasks & Event Listener
 
